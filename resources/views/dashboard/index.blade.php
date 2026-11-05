@@ -1,0 +1,8 @@
+@extends('layouts.app')
+@section('title','My dashboard')
+@section('content')
+<div class="page-heading"><p class="eyebrow">YOUR ACCOUNT</p><h1>Dashboard</h1><p>Manage your deals and saved offers.</p></div>
+<div class="dashboard-menu"><a class="btn btn-primary" href="{{ route('deals.create') }}">+ New deal</a><a class="btn btn-outline" href="{{ route('alerts.index') }}">Deal alerts</a><a class="btn btn-outline" href="{{ route('notifications.index') }}">Notifications ({{ auth()->user()->unreadNotifications()->count() }})</a>@if(auth()->user()->isStaff())<a class="btn btn-outline" href="{{ route('admin.index') }}">Moderation</a>@endif @if(in_array(auth()->user()->role,['merchant','admin']))<a class="btn btn-outline" href="{{ route('merchant.index') }}">Merchant panel</a>@endif</div>
+<div class="panel"><h2>My submitted deals</h2><div class="table-scroll"><table><thead><tr><th>Title</th><th>Store</th><th>Status</th><th>Votes</th><th>Action</th></tr></thead><tbody>@forelse($myDeals as $deal)<tr><td><a href="{{ route('deals.show',$deal->slug) }}">{{ $deal->title }}</a></td><td>{{ $deal->store->name }}</td><td><span class="tag">{{ ucfirst($deal->status) }}</span></td><td>{{ $deal->score }}</td><td><a href="{{ route('deals.edit',$deal->slug) }}">Edit</a></td></tr>@empty<tr><td colspan="5">You have not posted any deals.</td></tr>@endforelse</tbody></table></div>{{ $myDeals->links() }}</div>
+<div class="panel"><h2>Saved offers</h2>@forelse($saved as $item)<div class="side-link"><a href="{{ route('deals.show',$item->deal->slug) }}">{{ $item->deal->title }}</a><span>{{ $item->deal->store->name }}</span></div>@empty<p class="hint">No bookmarks yet.</p>@endforelse</div>
+@endsection
