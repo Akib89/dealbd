@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T00:00:00+06:00",
+  "title": "Design System: DealBD Community Deal Desk",
+  "extensions": {
+    "colorMeta": {
+      "brand-red": { "role": "primary", "displayName": "DealBD Red", "canonical": "#e82e31", "tonalRamp": ["#3b090a", "#6c1013", "#a1171b", "#c61f25", "#e82e31", "#ef6f71", "#f8b4b5", "#fff0f0"] },
+      "brand-red-dark": { "role": "primary", "displayName": "Deep DealBD Red", "canonical": "#c61f25", "tonalRamp": ["#33080a", "#5d0e11", "#8b161a", "#aa1b20", "#c61f25", "#dc5960", "#efa4a8", "#fce9ea"] },
+      "brand-red-soft": { "role": "neutral", "displayName": "Signal Wash", "canonical": "#fff0f0", "tonalRamp": ["#351617", "#603033", "#8b4f52", "#b7787a", "#d9a5a7", "#edc8c9", "#f7dfdf", "#fff0f0"] },
+      "desk-charcoal": { "role": "neutral", "displayName": "Desk Charcoal", "canonical": "#181b20", "tonalRamp": ["#101216", "#181b20", "#30353d", "#4c535e", "#707985", "#9ca3ad", "#ccd0d5", "#f2f3f4"] },
+      "desk-slate": { "role": "neutral", "displayName": "Desk Slate", "canonical": "#343942", "tonalRamp": ["#111317", "#20242a", "#343942", "#535b66", "#767f8b", "#a0a7b0", "#ced1d5", "#f3f4f5"] },
+      "muted-gray": { "role": "neutral", "displayName": "Muted Gray", "canonical": "#68717d", "tonalRamp": ["#171a1e", "#2c3138", "#474f59", "#68717d", "#858e99", "#a9afb7", "#d2d5d9", "#f4f5f6"] },
+      "workspace": { "role": "neutral", "displayName": "Workspace", "canonical": "#f5f6f7", "tonalRamp": ["#1d2024", "#373b41", "#585e66", "#7f868f", "#a9afb6", "#ced2d6", "#e7e9eb", "#f5f6f7"] },
+      "surface-white": { "role": "neutral", "displayName": "Surface White", "canonical": "#ffffff", "tonalRamp": ["#242424", "#444444", "#666666", "#898989", "#aeaeae", "#d0d0d0", "#ececec", "#ffffff"] },
+      "divider-gray": { "role": "neutral", "displayName": "Divider Gray", "canonical": "#d9dde2", "tonalRamp": ["#1b1f23", "#343940", "#535a63", "#777f89", "#9fa6af", "#c0c5cc", "#d9dde2", "#f5f6f7"] },
+      "positive-green": { "role": "secondary", "displayName": "Positive Green", "canonical": "#157347", "tonalRamp": ["#072117", "#0c3d29", "#115a39", "#157347", "#319361", "#6bb48a", "#b0dcc2", "#eaf6ef"] },
+      "warning-amber": { "role": "secondary", "displayName": "Warning Amber", "canonical": "#8a5a00", "tonalRamp": ["#291a00", "#4d3100", "#704900", "#8a5a00", "#ae7a22", "#d1a45e", "#ecd1a0", "#fff5d9"] },
+      "danger-red": { "role": "secondary", "displayName": "Danger Red", "canonical": "#b4232d", "tonalRamp": ["#30090c", "#581016", "#821821", "#a11f28", "#b4232d", "#d25760", "#eda3a8", "#fff0f1"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Discovery introduction only." },
+      "headline": { "displayName": "Headline", "purpose": "Page titles." },
+      "title": { "displayName": "Title", "purpose": "Section and panel headings." },
+      "body": { "displayName": "Body", "purpose": "Interface copy and explanations." },
+      "label": { "displayName": "Label", "purpose": "Fields, controls, and compact navigation." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "control-state", "value": "160ms ease-out", "purpose": "Hover, active, border, and color feedback on controls." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "820px" },
+      { "name": "mobile", "value": "580px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single dominant action in a task region.",
+      "html": "<button class=\"ds-btn-primary\">Post a deal</button>",
+      "css": ".ds-btn-primary{min-height:42px;padding:10px 16px;border:1px solid transparent;border-radius:8px;background:#e82e31;color:#fff;font:750 14px/1.2 Inter,system-ui,sans-serif}.ds-btn-primary:hover{background:#c61f25}.ds-btn-primary:focus-visible{outline:3px solid #181b20;outline-offset:3px}.ds-btn-primary:active{transform:translateY(1px)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A subordinate task action with a clear neutral boundary.",
+      "html": "<button class=\"ds-btn-secondary\">View details</button>",
+      "css": ".ds-btn-secondary{min-height:42px;padding:10px 16px;border:1px solid #b7bec7;border-radius:8px;background:#fff;color:#181b20;font:750 14px/1.2 Inter,system-ui,sans-serif}.ds-btn-secondary:hover{border-color:#181b20;background:#eef0f2}.ds-btn-secondary:focus-visible{outline:3px solid #181b20;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "The standard DealBD search and form control.",
+      "html": "<label class=\"ds-field\">Search deals<input placeholder=\"Phones, groceries, cashback...\"></label>",
+      "css": ".ds-field{display:grid;gap:6px;color:#343942;font:700 13px/1.3 Inter,system-ui,sans-serif}.ds-field input{min-height:43px;padding:10px 11px;border:1px solid #b7bec7;border-radius:8px;background:#fff;color:#181b20;font:400 15px/1.5 Inter,system-ui,sans-serif}.ds-field input:focus-visible{border-color:#181b20;outline:3px solid #181b201f;outline-offset:1px}"
+    },
+    {
+      "name": "Application Navigation",
+      "kind": "nav",
+      "description": "The white working header with DealBD?s signal edge and active underline.",
+      "html": "<nav class=\"ds-nav\"><strong><span>%</span> DealBD</strong><a class=\"active\" href=\"#\">Hot deals</a><a href=\"#\">New deals</a></nav>",
+      "css": ".ds-nav{display:flex;min-height:70px;align-items:center;gap:24px;border-top:4px solid #e82e31;border-bottom:1px solid #d9dde2;padding:0 24px;background:#fff;color:#181b20;font-family:Inter,system-ui,sans-serif}.ds-nav strong{margin-right:6px;font-size:22px}.ds-nav strong span{display:inline-grid;width:32px;height:32px;place-items:center;border-radius:8px;background:#e82e31;color:#fff}.ds-nav a{align-self:stretch;display:inline-flex;align-items:center;border-bottom:3px solid transparent;color:#343942;font-size:14px;font-weight:650;text-decoration:none}.ds-nav a.active{border-bottom-color:#e82e31;color:#181b20}.ds-nav a:focus-visible{outline:3px solid #181b20;outline-offset:3px}"
+    },
+    {
+      "name": "Deal Decision Row",
+      "kind": "card",
+      "description": "The signature feed pattern aligning community confidence, deal evidence, and price.",
+      "html": "<article class=\"ds-deal\"><div class=\"ds-score\"><strong>42</strong><small>score</small></div><div><span class=\"ds-tag\">Electronics</span><h3>Community-approved offer title</h3><p>Merchant ? conditions ? discussion</p><strong class=\"ds-price\">?12,990</strong></div></article>",
+      "css": ".ds-deal{display:grid;grid-template-columns:72px 1fr;border:1px solid #d9dde2;border-radius:12px;overflow:hidden;background:#fff;color:#181b20;font-family:Inter,system-ui,sans-serif}.ds-score{display:flex;min-height:120px;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid #b9ddc9;background:#eaf6ef;color:#157347}.ds-score strong{font-size:20px}.ds-score small{font-size:10px;font-weight:700;text-transform:uppercase}.ds-deal>div:last-child{padding:17px 18px}.ds-deal h3{margin:7px 0 5px;font-size:17px;line-height:1.3}.ds-deal p{margin:0 0 10px;color:#68717d;font-size:12px}.ds-price{font-size:21px}.ds-tag{display:inline-flex;border-radius:6px;padding:3px 7px;background:#eef0f2;color:#4d5661;font-size:11px;font-weight:750}.ds-deal:focus-within{outline:3px solid #181b20;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Community Deal Desk",
+    "overview": "DealBD feels like an established public desk where Bangladeshi shoppers compare evidence before acting. It is practical, accountable, information-rich, and easy to operate. Brand red works as a signal rather than decoration, while the decision lane aligns community confidence, deal evidence, and the next valid action.",
+    "keyCharacteristics": [
+      "Compact, structured, and information-rich without becoming cramped.",
+      "One clearly dominant action per task region.",
+      "Strong deal-state and community-state visibility.",
+      "Borders, alignment, and restrained fills instead of routine shadows.",
+      "Familiar controls with direct, locally relevant language."
+    ],
+    "rules": [
+      { "name": "The Semantic Color Rule", "body": "Brand red never substitutes for danger, and green never appears as decoration.", "section": "colors" },
+      { "name": "The Borders Before Elevation Rule", "body": "A surface earns elevation only when it actually moves above another interaction layer; ordinary page regions remain grounded.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do make price, title, merchant, status, and primary action readable first.",
+      "Do expose moderation, affiliation, expiry, and manually submitted price-history limitations.",
+      "Do use authored SVG icons or clear text labels.",
+      "Do give controls default, hover, focus-visible, active, disabled, error, and empty states.",
+      "Do explain what an empty state means and offer a valid next action."
+    ],
+    "donts": [
+      "Don't use oversized promotional heroes inside the product.",
+      "Don't use gradients, glows, glass effects, or decorative motion.",
+      "Don't force every task into repeating same-size cards.",
+      "Don't give primary, secondary, destructive, and administrative actions equal emphasis.",
+      "Don't use Unicode glyphs as interface icons or decorative eyebrow labels above headings."
+    ]
+  }
+}

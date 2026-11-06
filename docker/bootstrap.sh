@@ -10,7 +10,18 @@ if [ ! -f artisan ] || [ ! -f composer.json ]; then
   composer create-project laravel/laravel /tmp/dealbd-laravel-base '^13.0' \
     --no-interaction --no-install --no-scripts
   # Copy only missing files: the DealBD overlay takes precedence.
-  cp -an /tmp/dealbd-laravel-base/. /var/www/html/
+  # Alpine's `cp -n` skips an existing destination directory instead of
+  # merging into it, so create directories and copy files individually.
+  find /tmp/dealbd-laravel-base -type d | while IFS= read -r source; do
+    relative=${source#/tmp/dealbd-laravel-base}
+    mkdir -p /var/www/html${relative}
+  done
+  find /tmp/dealbd-laravel-base -type f | while IFS= read -r source; do
+    relative=${source#/tmp/dealbd-laravel-base}
+    if [ ! -e /var/www/html${relative} ]; then
+      cp -p $source /var/www/html${relative}
+    fi
+  done
 fi
 
 if [ ! -f .env ]; then
@@ -29,6 +40,9 @@ if [ ! -f artisan ] || [ ! -f composer.json ]; then
 fi
 
 composer install --no-interaction --prefer-dist --optimize-autoloader
+
+# PHP-FPM runs as www-data and must write logs, sessions, and compiled views.
+chmod -R a+rwX storage bootstrap/cache
 
 if ! grep -q '^APP_KEY=base64:' .env; then
   php artisan key:generate --force
