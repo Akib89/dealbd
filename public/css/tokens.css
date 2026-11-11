@@ -1,0 +1,16 @@
+:root {
+    --text-xs: 0.75rem; --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.125rem; --text-xl: 1.5rem; --text-2xl: 2rem; --text-3xl: 2.75rem;
+    --text-display-s: clamp(2.75rem, 5vw, 5.75rem); --text-display: clamp(3.25rem, 7vw, 6rem); --text-section: clamp(2rem, 3vw, 3.5rem); --text-title: clamp(1.25rem, 1.5vw, 1.75rem); --text-lead: clamp(1.0625rem, 0.5vw + 0.95rem, 1.25rem);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --ease-in: cubic-bezier(0.7, 0, 0.84, 0); --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    --dur-micro: 120ms; --dur-short: 220ms; --dur-long: 420ms;
+    --color-paper: oklch(96.5% 0.022 82); --color-paper-2: oklch(92.5% 0.032 79); --color-paper-3: oklch(88% 0.046 77); --color-surface: oklch(99% 0.012 82);
+    --color-ink: oklch(21% 0.028 45); --color-ink-2: oklch(34% 0.035 48); --color-muted: oklch(46% 0.03 55); --color-rule: oklch(67% 0.045 67); --color-rule-soft: oklch(83% 0.035 74);
+    --color-accent: oklch(51% 0.2 29); --color-accent-strong: oklch(43% 0.18 29); --color-accent-soft: oklch(91% 0.055 31); --color-accent-ink: oklch(98% 0.01 82);
+    --color-highlight: oklch(79% 0.14 83); --color-highlight-soft: oklch(93% 0.065 86);
+    --color-success: oklch(44% 0.12 150); --color-success-soft: oklch(92% 0.04 151); --color-warning: oklch(48% 0.11 72); --color-warning-soft: oklch(93% 0.06 83);
+    --color-error: oklch(47% 0.17 27); --color-error-soft: oklch(93% 0.045 25); --color-info: oklch(43% 0.1 245); --color-info-soft: oklch(93% 0.035 238); --color-focus: oklch(27% 0.11 255); --color-transparent: transparent;
+    --font-display: "Instrument Sans", ui-sans-serif, system-ui, sans-serif; --font-body: "Instrument Sans", ui-sans-serif, system-ui, sans-serif; --font-outlier: var(--font-display);
+    --container: 1320px; --gutter: 32px; --gap-columns: 24px; --section-gap-s: 72px; --section-gap: 96px; --section-gap-l: 128px;
+    --radius-control: 3px; --radius-card: 6px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: 0 12px 28px oklch(21% 0.028 45 / 0.08); --tracking-display: -0.035em;
+    --z-base: 1; --z-raised: 10; --z-dropdown: 100; --z-sticky: 200; --z-sticky-nav: 300; --z-modal: 400; --z-toast: 500; --z-tooltip: 600;
+}

@@ -1,0 +1,25 @@
+{
+    "scanned":  "2026-11-12",
+    "findings":  {
+                     "fonts":  "Self-hosted Instrument Sans",
+                     "palette":  "Legacy red, charcoal, and gray tokens",
+                     "motion":  "CSS transitions only",
+                     "spacing":  "Compact application scale",
+                     "framework":  "Laravel 13 with Blade and public CSS"
+                 },
+    "preserve":  [
+                     "routes",
+                     "workflows",
+                     "real deal data",
+                     "moderation states",
+                     "BDT pricing",
+                     "disclosures",
+                     "accessibility behavior"
+                 ],
+    "introduce":  [
+                      "Bazaar Bulletin visual world",
+                      "price-led feed composition",
+                      "working search-desk hero",
+                      "responsive bulletin lanes"
+                  ]
+}

@@ -1,0 +1,32 @@
+{
+    "mode":  "redesign",
+    "depth":  "full",
+    "scope":  "site",
+    "shape":  "Bazaar Bulletin",
+    "theme":  "custom",
+    "axes":  "light/grotesk-heavy/warm",
+    "hero":  "working search desk",
+    "nav":  "issue rail",
+    "footer":  "publication colophon",
+    "imagery":  "product UI only",
+    "photos":  [
+
+               ],
+    "entry":  "home feed",
+    "fingerprint":  "bazaar-bulletin-price-lanes",
+    "sections":  [
+                     "search desk",
+                     "deal feed",
+                     "browse rail",
+                     "colophon"
+                 ],
+    "signature":  "price-led deal bulletins with confidence seals",
+    "waived":  [
+
+               ],
+    "prompt":  "redesign DealBD website",
+    "seed":  "seed:0aa623d3c48423ba",
+    "sweep":  "Floor 0 FAIL; Reflex 0; WARN 0",
+    "finishReview":  "in-thread: ship",
+    "render":  "not run: Docker stopped and local PHP unavailable"
+}
